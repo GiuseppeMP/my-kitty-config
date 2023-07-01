@@ -23,7 +23,10 @@ ICON = "  "
 RIGHT_MARGIN = 1
 REFRESH_TIME = 15
 
-icon_fg = as_rgb(color_as_int(Color(255, 250, 205)))
+# (field) ColorScheme.red: string = "#f7768e"
+
+# icon_fg = as_rgb(color_as_int(Color(255, 250, 205)))
+icon_fg = as_rgb(0xf7768e)
 icon_bg = as_rgb(color_as_int(Color(47, 61, 68)))
 # OR icon_bg = as_rgb(0x2f3d44)
 bat_text_color = as_rgb(0x999F93)
