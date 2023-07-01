@@ -76,8 +76,8 @@ def _draw_left_status(
     extra_data: ExtraData,
 ) -> int:
     # print(extra_data)
-    if is_last:
-        return 0
+    # if is_last:
+    #     return 0
     if draw_data.leading_spaces:
         screen.draw(" " * draw_data.leading_spaces)
 
@@ -198,9 +198,9 @@ def draw_tab(
         is_last,
         extra_data,
     )
-    _draw_right_status(
-        screen,
-        is_last,
-    )
+    # _draw_right_status(
+    #     screen,
+    #     is_last,
+    # )
 
     return screen.cursor.x
