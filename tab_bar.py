@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 
 from kitty.boss import get_boss
 from kitty.fast_data_types import Screen, add_timer
-from kitty.rgb import Color
+from kitty.rgb import Color, alpha_blend
 from kitty.tab_bar import (
     DrawData,
     ExtraData,
@@ -27,8 +27,8 @@ REFRESH_TIME = 15
 
 # icon_fg = as_rgb(color_as_int(Color(255, 250, 205)))
 icon_fg = as_rgb(0xf7768e)
-icon_bg = as_rgb(color_as_int(Color(47, 61, 68)))
-# OR icon_bg = as_rgb(0x2f3d44)
+# icon_bg = as_rgb(color_as_int(alpha_blend("#000", "#000", 0.8)))
+icon_bg = as_rgb(0x2f3d44)
 bat_text_color = as_rgb(0x999F93)
 clock_color = as_rgb(0x7FBBB3)
 dnd_color = as_rgb(0x465258)
@@ -109,7 +109,8 @@ def _draw_left_status(
 
 
 def _get_dnd_status():
-    result = subprocess.run("~/.dotfiles/bin/dnd -k", shell=True, capture_output=True)
+    result = subprocess.run("~/.dotfiles/bin/dnd -k",
+                            shell=True, capture_output=True)
     status = ""
 
     if result.stderr:
