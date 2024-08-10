@@ -29,7 +29,8 @@ REFRESH_TIME = 15
 # icon_bg = as_rgb(color_as_int(alpha_blend("#000", "#000", 0.8)))
 
 # icon_fg = as_rgb(color_as_int(Color(105, 255, 148)))
-icon_fg = as_rgb(color_as_int(Color(158, 206, 106)))
+# icon_fg = as_rgb(color_as_int(Color(158, 206, 106)))
+icon_fg = as_rgb(color_as_int(Color(177,206,146)))
 
 icon_bg = as_rgb(color_as_int(Color(36, 41, 59)))
 # icon_fg = as_rgb(0xf7768e)
